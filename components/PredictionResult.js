@@ -11,16 +11,16 @@ export default function PredictionResult({ prediction }) {
 
 const styles = StyleSheet.create({
   resultBox: {
-    marginTop: 30,
+    backgroundColor: '#003161', // Secondary blue
+    borderRadius: 15,
     padding: 20,
-    backgroundColor: '#111',
-    borderRadius: 10,
-    borderColor: '#39ff14',
-    borderWidth: 2,
+    marginTop: 20,
+    borderWidth: 1,
+    borderColor: '#FFF4B7',
     alignItems: 'center',
   },
   resultText: {
-    color: '#39ff14',
+    color: '#FFF4B7', // Light yellow
     fontSize: 24,
     fontWeight: 'bold',
   },

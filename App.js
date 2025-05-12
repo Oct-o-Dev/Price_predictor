@@ -20,11 +20,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0a0a23', // dark navy blue/black
+    backgroundColor: '#000B58', // Primary dark blue
   },
   inner: {
     flexGrow: 1,
-    justifyContent: 'center',
     padding: 20,
   },
 });
