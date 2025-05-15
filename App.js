@@ -1,29 +1,26 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, View, ScrollView } from 'react-native';
-import PriceForm from './components/PriceForm';
-import PredictionResult from './components/PredictionResult';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './components/HomeScreen';
+import MovieDetailsScreen from './components/MovieDetailsScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [prediction, setPrediction] = useState(null);
-
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <ScrollView contentContainerStyle={styles.inner}>
-        <PriceForm setPrediction={setPrediction} />
-        {prediction && <PredictionResult prediction={prediction} />}
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'Movie Recommender' }}
+        />
+        <Stack.Screen
+          name="MovieDetails"
+          component={MovieDetailsScreen}
+          options={{ title: 'Movie Details' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000B58', // Primary dark blue
-  },
-  inner: {
-    flexGrow: 1,
-    padding: 20,
-  },
-});

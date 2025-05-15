@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Sales Forcasting",
+    "name": "Movie Recommendation",
     "slug": "price-predictor",
     "version": "1.0.0",
     "orientation": "portrait",
